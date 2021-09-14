@@ -1,0 +1,40 @@
+26001904131 chokeunhee
+
+The following is the compiled result of statements 
+
+test.c:6:6: error: expected identifier or '('
+        int while;
+            ^
+test.c:7:12: error: expected ';' at end of declaration
+        int result #2;
+                  ^
+                  ;
+test.c:8:6: error: expected identifier or '('
+        int 4th;
+            ^
+test.c:10:9: error: expected ';' at end of declaration
+        int no3 no4;
+               ^
+               ;
+test.c:13:9: error: expected ';' at end of declaration
+        int sum-ave;
+               ^
+               ;
+5 errors generated.
+
+The following is the 
+
+(o) int ave;
+(x) int while;
+- while is an already reserved keyword therefore it is not allowed to be used
+(x) int result #2; 
+- # cannot be used for the name of the variable
+(x) int 4th;
+- variables cannot start with a number
+(o) int _5th;
+(x) int no3 no4; 
+- missing a comma between the two variables
+(o) int no1, no2; 
+(o) int sum_ave; 
+(x) int sum-ave;
+- '-' cannot be considered as a letter

@@ -1,0 +1,34 @@
+26001904131 chokeunhee
+
+The following is the result of complied statements
+
+test.c:10:12: error: expected ')'
+        r=(i+(j-k);
+                  ^
+test.c:10:4: note: to match this '('
+        r=(i+(j-k);
+          ^
+test.c:12:5: error: expression is not assignable
+        i+j=r;
+        ~~~^
+test.c:13:3: warning: expression result unused [-Wunused-value]
+        i+j;
+        ~^~
+test.c:16:6: error: indirection requires pointer operand ('int' invalid)
+        q=i**k;
+            ^~
+
+(o)r=i+j;
+(o)r=i*j-k;
+(o)r=i*(j-k);
+(x)r=(i+(j-k);
+-there is a missing ) making syntax error
+(o)j=j-1;
+(x)i+j=r;
+-this expression is not assignable
+(x)i+j;
+-the result expression is not classified
+(o)r=(j*i)%(i-j)/k;
+(o)q=r=i+j;
+(x)q=i**k;
+-** is an invalid expression

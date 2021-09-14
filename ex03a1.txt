@@ -1,0 +1,4 @@
+26001904131 chokeunhee
+
+For A1 I estimate value of i as 1 and value of j as 2.
+This is because int only able to show the number without the decimals as I know.

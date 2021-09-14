@@ -1,0 +1,6 @@
+26001904131 chokeunhee
+
+For b1 I estimate the value of c1 , c2 and c3 as 30, 1.0 and 1.5
+for c1 multiple is consider done previously than the addition therefore is 6 + 24 leads to 30
+for c2 a/b is a equation done with two int therefore is 1. However, the c2 is a double, therefore is 1.0
+for c3 unlike c2 a and b is considered as double, therefore is 1.5

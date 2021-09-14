@@ -1,0 +1,49 @@
+26001904131 chokeunhee
+
+The following is the result of complied statements
+
+test.c:7:27: warning: more '%' conversions than data arguments [-Wformat]
+        printf("Today's date is %d. \n");
+                                ~^
+test.c:8:34: error: expected ')'
+        printf("Today's date is %d. \n" i);
+                                        ^
+test.c:8:8: note: to match this '('
+        printf("Today's date is %d. \n" i);
+              ^
+test.c:13:31: warning: more '%' conversions than data arguments [-Wformat]
+        printf("%d's temperature is %d. \n",i);
+                                    ~^
+test.c:14:31: warning: more '%' conversions than data arguments [-Wformat]
+        printf("%d's temperature is %d. \n,j",i);
+                                    ~^
+test.c:16:9: error: expected expression
+        printf(%d's temperature is %d.,j,i);
+               ^
+test.c:16:11: warning: missing terminating ' character [-Winvalid-pp-token]
+        printf(%d's temperature is %d.,j,i);
+                 ^
+test.c:16:10: error: use of undeclared identifier 'd'
+        printf(%d's temperature is %d.,j,i);
+                ^
+test.c:22:1: error: expected '}'
+^
+test.c:3:11: note: to match this '{'
+int main(){
+
+
+(x)printf("Today's date is %d. \n");
+- there is a missing data argument
+(x)printf("Today's date is %d. \n" i);
+- a comma is missing between in front of the data argument
+(o)printf("Today's date is %d. \n",i);
+(o)printf("Today's date is 2. \n");
+(o)printf("Today's date is %d. \n",17);
+(o)printf("Today's date is %d. \n",i+1);
+(x)printf("%d's temperature is %d. \n",i);
+- there is a missing data argument
+(x)printf("%d's temperature is %d. \n,j",i);
+- there is a missing data argument (j is considered as a text not data argument due to the syntax)
+(o)printf("%d's temperature is %d. \n",j,i);
+(x)printf(%d's temperature is %d.,j,i);
+- "" is missing causing error
